@@ -1,2 +1,2 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.allever.lib.ad" />
+    package="org.xm.lib.ad.core" />

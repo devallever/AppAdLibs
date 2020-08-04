@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.allever.lib.ad.ifly" >
+    package="org.xm.lib.ad.ifly" >
 
     <!--以下权限需在应用中注册-->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +14,7 @@
 
     <application>
 
-        <activity android:name=".NativeFullVideoActivity"
+        <activity android:name="org.xm.lib.ad.ifly.NativeFullVideoActivity"
             android:theme="@style/IFlyFullScreenStyle"/>
 
         <!-- 项目中报红无影响，必需添加 -->

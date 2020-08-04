@@ -1,0 +1,58 @@
+package org.xm.lib.ad.mimo
+
+import android.view.ViewGroup
+import org.xm.lib.ad.core.chain.AdChainListener
+import org.xm.lib.ad.core.chain.IAd
+import com.miui.zeus.mimo.sdk.ad.IRewardVideoAdWorker
+
+class MiMoVideoAd : IAd() {
+
+    private var mAdWorker: IRewardVideoAdWorker? = null
+
+    override fun load(adPosition: String?, container: ViewGroup?, adListener: AdChainListener?) {
+        mAdWorker = MiMoBusiness.loadRewardVideo(
+            adPosition!!,
+            object :
+                AdChainListener {
+                override fun onLoaded(ad: IAd?) {
+                    adListener?.onLoaded(this@MiMoVideoAd)
+                }
+
+                override fun onFailed(msg: String) {
+                    adListener?.onFailed(msg)
+                }
+
+                override fun onShowed() {
+                    adListener?.onShowed()
+                }
+
+                override fun onDismiss() {
+                    adListener?.onDismiss()
+                }
+
+            })
+    }
+
+    override fun show() {
+        MiMoBusiness.showVideo(mAdWorker)
+    }
+
+    override fun loadAndShow(
+        adPosition: String?,
+        container: ViewGroup?,
+        adListener: AdChainListener?
+    ) {
+    }
+
+    override fun destroy() {
+        MiMoBusiness.destroyVideo(mAdWorker)
+    }
+
+    override fun onAdResume() {
+
+    }
+
+    override fun onAdPause() {
+
+    }
+}

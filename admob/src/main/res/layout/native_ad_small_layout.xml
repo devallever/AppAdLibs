@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.allever.lib.ad.admob.TemplateView
+    <org.xm.lib.ad.admob.TemplateView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/templateView"
         app:gnt_template_type="@layout/gnt_small_template_view">
 
-    </com.allever.lib.ad.admob.TemplateView>
+    </org.xm.lib.ad.admob.TemplateView>
 
 </FrameLayout>

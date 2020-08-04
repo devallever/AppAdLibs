@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.allever.lib.ad.mimo" >
+    package="org.xm.lib.ad.mimo" >
 
     <!-- 米盟广告   -->
     <uses-permission android:name="android.permission.INTERNET"/>

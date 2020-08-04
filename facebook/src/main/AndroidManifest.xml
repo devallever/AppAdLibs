@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 
-    package="com.allever.lib.ad.facebook">
+    package="org.xm.lib.ad.facebook">
 
     <application>
 
