@@ -1,0 +1,20 @@
+include ':wanpu'
+include ':mimo'
+include ':iflyad'
+include ':facebook'
+include ':amazon'
+include ':admob_lite'
+include ':AdsLib'
+include ':admob'
+include ':adlib'
+include ':app'
+rootProject.name = "AppAdLibs"
+
+include ':common'
+project(':common').projectDir = new File(settingsDir, '../AppLibs/common')
+
+include ':permission'
+project(':permission').projectDir = new File(settingsDir, '../AppLibs/permission')
+
+include ':httpsglide'
+project(':httpsglide').projectDir = new File(settingsDir, '../AppLibs/httpsglide')
