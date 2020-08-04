@@ -22,6 +22,6 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api project(path: ':common')
+    api project(path: ':core')
     api project(path: ':adlib')
 }

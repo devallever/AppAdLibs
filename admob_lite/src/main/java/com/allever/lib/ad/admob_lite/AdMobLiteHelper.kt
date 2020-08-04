@@ -1,12 +1,10 @@
 package com.allever.lib.ad.admob_lite
 
 import android.content.Context
-import com.allever.lib.ad.ADType
 import com.allever.lib.ad.AdManager
 import com.allever.lib.ad.BaseAd
-import com.google.android.gms.ads.MobileAds
 
-object AdMobLiteHelper: AdManager() {
+object AdMobLiteHelper : AdManager() {
     var testDevicesList = mutableListOf<String>()
     override fun init(context: Context, appId: String, appKey: String, appToken: String) {
 //        MobileAds.initialize(context) {

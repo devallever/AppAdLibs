@@ -3,11 +3,11 @@ package com.allever.lib.ad.amazon
 import android.view.ViewGroup
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.log
 import com.amazon.device.ads.*
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
-class AmazonInsert: BaseAd() {
+class AmazonInsert : BaseAd() {
 
     private var interstitialAd: InterstitialAd? = null
 

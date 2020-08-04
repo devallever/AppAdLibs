@@ -1,17 +1,14 @@
 package com.allever.lib.ad.amazon
 
-import android.util.Log
 import android.view.ViewGroup
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.log
 import com.amazon.device.ads.*
-import com.amazon.device.ads.AdTargetingOptions
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
 
-
-class AmazonBanner: BaseAd() {
+class AmazonBanner : BaseAd() {
 
     private var adView: AdLayout? = null // The ad view used to load and display the ad.
 

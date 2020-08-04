@@ -5,10 +5,9 @@ import android.view.View
 import android.widget.LinearLayout
 import com.allever.lib.ad.ADType
 import com.allever.lib.ad.AdHelper
-import com.allever.lib.common.app.App
-import com.allever.lib.common.app.BaseActivity
+import org.xm.lib.core.base.AbstractActivity
 
-class WanpuMainActivity: BaseActivity(), View.OnClickListener {
+class WanpuMainActivity : AbstractActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +25,7 @@ class WanpuMainActivity: BaseActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-        when(view?.id) {
+        when (view?.id) {
             R.id.btnInsert -> {
                 val insertAd = AdHelper.createAd(ADType.INSERT)
                 insertAd?.loadAndShow("", null, null)

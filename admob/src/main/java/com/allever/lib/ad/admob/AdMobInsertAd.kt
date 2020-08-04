@@ -4,13 +4,12 @@ import android.view.ViewGroup
 import com.allever.lib.ad.chain.AdChainHelper
 import com.allever.lib.ad.chain.AdChainListener
 import com.allever.lib.ad.chain.IAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.log
-import com.allever.lib.common.util.toast
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
-class AdMobInsertAd: IAd() {
+class AdMobInsertAd : IAd() {
 
     private var interstitialAd: InterstitialAd? = null
 

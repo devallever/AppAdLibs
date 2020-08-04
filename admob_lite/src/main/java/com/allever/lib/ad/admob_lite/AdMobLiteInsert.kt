@@ -3,12 +3,12 @@ package com.allever.lib.ad.admob_lite
 import android.view.ViewGroup
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.log
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
-class AdMobLiteInsert: BaseAd() {
+class AdMobLiteInsert : BaseAd() {
     private var interstitialAd: InterstitialAd? = null
     override fun load(adPosition: String, container: ViewGroup?, adListener: AdListener?) {
         interstitialAd = InterstitialAd(App.context)

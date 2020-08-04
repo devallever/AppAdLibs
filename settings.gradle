@@ -10,8 +10,8 @@ include ':adlib'
 include ':app'
 rootProject.name = "AppAdLibs"
 
-include ':common'
-project(':common').projectDir = new File(settingsDir, '../AppLibs/common')
+include ':core'
+project(':core').projectDir = new File(settingsDir, '../AppLibs/core')
 
 include ':permission'
 project(':permission').projectDir = new File(settingsDir, '../AppLibs/permission')

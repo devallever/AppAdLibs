@@ -3,15 +3,16 @@ package com.allever.lib.ad.admob
 import android.view.ViewGroup
 import com.allever.lib.ad.chain.AdChainListener
 import com.allever.lib.ad.chain.IAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.ActivityCollector
-import com.allever.lib.common.util.log
 import com.google.android.gms.ads.rewarded.RewardItem
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdCallback
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import org.xm.lib.core.base.App
+import org.xm.lib.core.helper.ActivityHelper
+import org.xm.lib.core.util.log
 
-class AdMobVideoAd: IAd() {
+
+class AdMobVideoAd : IAd() {
 
     private var rewardedAd: RewardedAd? = null
     private var mAdListener: AdChainListener? = null
@@ -69,7 +70,7 @@ class AdMobVideoAd: IAd() {
                 log("AdMob 激励视频 onRewardedAdFailedToShow $errorCode")
             }
         }
-        rewardedAd?.show(ActivityCollector.getTopActivity(), adCallback)
+        rewardedAd?.show(ActivityHelper.getTopActivity(), adCallback)
     }
 
     override fun loadAndShow(

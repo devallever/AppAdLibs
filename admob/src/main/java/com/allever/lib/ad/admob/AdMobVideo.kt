@@ -4,16 +4,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.ActivityCollector
-import com.allever.lib.common.util.log
 import com.google.android.gms.ads.rewarded.RewardItem
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdCallback
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import org.xm.lib.core.base.App
+import org.xm.lib.core.helper.ActivityHelper
+import org.xm.lib.core.util.log
 
 @Deprecated("")
-class AdMobVideo: BaseAd() {
+class AdMobVideo : BaseAd() {
 
     private var rewardedAd: RewardedAd? = null
     private var mAdListener: AdListener? = null
@@ -60,7 +60,7 @@ class AdMobVideo: BaseAd() {
                 log("AdMob 激励视频 onRewardedAdFailedToShow $errorCode")
             }
         }
-        rewardedAd?.show(ActivityCollector.getTopActivity(), adCallback)
+        rewardedAd?.show(ActivityHelper.getTopActivity(), adCallback)
     }
 
     override fun loadAndShow(adPosition: String, container: ViewGroup?, adListener: AdListener?) {

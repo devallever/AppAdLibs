@@ -1,14 +1,14 @@
 package com.allever.lib.ad.ifly
 
 import android.content.Context
-import com.allever.lib.ad.ADType
 import com.allever.lib.ad.AdManager
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.app.App
 import com.iflytek.voiceads.config.SDKLogger
 import com.iflytek.voiceads.dex.DexLoader
+import org.xm.lib.core.base.App
 
-object IFlyAdHelper: AdManager() {
+
+object IFlyAdHelper : AdManager() {
     override fun init(context: Context, appId: String, appKey: String, appToken: String) {
         //<!--若需要开启日志，需要在初始化广告模块前调用-->
         SDKLogger.setDebug(BuildConfig.DEBUG)

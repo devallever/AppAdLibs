@@ -7,15 +7,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import cn.waps.AdInfo
-import cn.waps.AppConnect
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
 import com.allever.lib.ad.wanpu.WanPuAdHelper.mIns
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.ActivityCollector
 import com.bumptech.glide.Glide
+import org.xm.lib.core.base.App
+import org.xm.lib.core.helper.ActivityHelper
 
-class WanPuCustomInsert: BaseAd() {
+
+class WanPuCustomInsert : BaseAd() {
 
     private var mInsertDialog: AlertDialog? = null
     private var mAdInfo: AdInfo? = null
@@ -30,7 +30,7 @@ class WanPuCustomInsert: BaseAd() {
     }
 
     override fun show() {
-        mAdInfo?: return
+        mAdInfo ?: return
         val view = LayoutInflater.from(App.context).inflate(R.layout.dialog_ad_insert, null, false)
         val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
         val tvName = view.findViewById<TextView>(R.id.tvAppName)
@@ -59,7 +59,7 @@ class WanPuCustomInsert: BaseAd() {
         view.findViewById<View>(R.id.tvClose).setOnClickListener {
             mInsertDialog?.dismiss()
         }
-        mInsertDialog = AlertDialog.Builder(ActivityCollector.getTopActivity()?:return)
+        mInsertDialog = AlertDialog.Builder(ActivityHelper.getTopActivity() ?: return)
             .setView(view)
             .setCancelable(false)
             .create()

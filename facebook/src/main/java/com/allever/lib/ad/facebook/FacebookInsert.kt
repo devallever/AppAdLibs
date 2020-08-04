@@ -3,14 +3,15 @@ package com.allever.lib.ad.facebook
 import android.view.ViewGroup
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.log
 import com.facebook.ads.Ad
 import com.facebook.ads.AdError
 import com.facebook.ads.InterstitialAd
 import com.facebook.ads.InterstitialAdListener
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
-class FacebookInsert: BaseAd() {
+
+class FacebookInsert : BaseAd() {
     private var interstitialAd: InterstitialAd? = null
     override fun load(adPosition: String, container: ViewGroup?, adListener: AdListener?) {
         interstitialAd = InterstitialAd(App.context, adPosition)

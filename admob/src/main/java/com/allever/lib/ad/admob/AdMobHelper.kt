@@ -4,11 +4,11 @@ import android.content.Context
 import com.allever.lib.ad.ADType
 import com.allever.lib.ad.AdManager
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.util.log
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
+import org.xm.lib.core.util.log
 
-object AdMobHelper: AdManager() {
+object AdMobHelper : AdManager() {
     var testDevicesList = mutableListOf<String>()
     override fun init(context: Context, appId: String, appKey: String, appToken: String) {
         MobileAds.initialize(context) {
@@ -42,7 +42,7 @@ object AdMobHelper: AdManager() {
         return reqBuild.build()
     }
 
-    internal fun logError(errorCode:  Int) {
+    internal fun logError(errorCode: Int) {
         when (errorCode) {
             0 -> {
                 log("内部错误")

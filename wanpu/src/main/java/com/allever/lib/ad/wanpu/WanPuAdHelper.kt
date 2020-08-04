@@ -7,7 +7,7 @@ import com.allever.lib.ad.AdManager
 import com.allever.lib.ad.BaseAd
 
 @SuppressLint("StaticFieldLeak")
-object WanPuAdHelper: AdManager() {
+object WanPuAdHelper : AdManager() {
     lateinit var mIns: AppConnect
     var mContext: Context? = null
     override fun init(context: Context, appId: String, appKey: String, appToken: String) {

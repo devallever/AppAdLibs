@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
 
-class AmazonVideo : BaseAd(){
+class AmazonVideo : BaseAd() {
     override fun load(adPosition: String, container: ViewGroup?, adListener: AdListener?) {
         adListener?.onFailed()
     }

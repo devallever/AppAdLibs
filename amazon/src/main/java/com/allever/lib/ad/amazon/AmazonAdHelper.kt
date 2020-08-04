@@ -1,13 +1,12 @@
 package com.allever.lib.ad.amazon
 
 import android.content.Context
-import com.allever.lib.ad.ADType
 import com.allever.lib.ad.AdManager
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.util.loge
 import com.amazon.device.ads.AdRegistration
+import org.xm.lib.core.util.loge
 
-object AmazonAdHelper: AdManager() {
+object AmazonAdHelper : AdManager() {
     /***
      * appId 就是appkey
      */

@@ -6,10 +6,10 @@ import cn.waps.AppListener
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
 import com.allever.lib.ad.wanpu.WanPuAdHelper.mIns
-import com.allever.lib.common.util.log
-import java.lang.RuntimeException
+import org.xm.lib.core.util.log
 
-class WanPuBanner: BaseAd() {
+
+class WanPuBanner : BaseAd() {
     override fun load(adPosition: String, container: ViewGroup?, adListener: AdListener?) {
 
     }

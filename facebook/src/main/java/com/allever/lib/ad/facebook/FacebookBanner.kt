@@ -3,14 +3,15 @@ package com.allever.lib.ad.facebook
 import android.view.ViewGroup
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.log
 import com.facebook.ads.Ad
 import com.facebook.ads.AdError
 import com.facebook.ads.AdSize
 import com.facebook.ads.AdView
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
-class FacebookBanner: BaseAd() {
+
+class FacebookBanner : BaseAd() {
 
     private var facebookbanner: AdView? = null
 

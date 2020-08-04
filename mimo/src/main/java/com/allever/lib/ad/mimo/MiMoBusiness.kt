@@ -3,12 +3,9 @@ package com.allever.lib.ad.mimo
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
-import com.allever.lib.ad.ADType
 import com.allever.lib.ad.chain.AdChainListener
 import com.allever.lib.ad.chain.IAd
 import com.allever.lib.ad.chain.IAdBusiness
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.log
 import com.miui.zeus.mimo.sdk.MimoSdk
 import com.miui.zeus.mimo.sdk.ad.AdWorkerFactory
 import com.miui.zeus.mimo.sdk.ad.IAdWorker
@@ -17,8 +14,11 @@ import com.miui.zeus.mimo.sdk.api.IMimoSdkListener
 import com.miui.zeus.mimo.sdk.listener.MimoAdListener
 import com.miui.zeus.mimo.sdk.listener.MimoRewardVideoListener
 import com.xiaomi.ad.common.pojo.AdType
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
-object MiMoBusiness: IAdBusiness() {
+
+object MiMoBusiness : IAdBusiness() {
     override fun init(context: Context, appId: String, appKey: String, appToken: String) {
         // 如果担心sdk自升级会影响开发者自身app的稳定性可以关闭，
         // 但是这也意味着您必须得重新发版才能使用最新版本的sdk, 建议开启自升级
@@ -105,7 +105,10 @@ object MiMoBusiness: IAdBusiness() {
 
     }
 
-    fun loadRewardVideo(adPosition: String, AdChainListener: AdChainListener?): IRewardVideoAdWorker? {
+    fun loadRewardVideo(
+        adPosition: String,
+        AdChainListener: AdChainListener?
+    ): IRewardVideoAdWorker? {
         var adWorker: IRewardVideoAdWorker? = null
         try {
             adWorker = AdWorkerFactory

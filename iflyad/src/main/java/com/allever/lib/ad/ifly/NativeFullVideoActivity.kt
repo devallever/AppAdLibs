@@ -8,9 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.allever.lib.common.app.App
-import com.allever.lib.common.app.BaseActivity
-import com.allever.lib.common.util.log
 import com.bumptech.glide.Glide
 import com.iflytek.voiceads.IFLYVideoAd
 import com.iflytek.voiceads.config.AdError
@@ -18,8 +15,11 @@ import com.iflytek.voiceads.config.AdKeys
 import com.iflytek.voiceads.conn.VideoDataRef
 import com.iflytek.voiceads.listener.IFLYVideoListener
 import org.jetbrains.anko.toast
+import org.xm.lib.core.base.AbstractActivity
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
-class NativeFullVideoActivity: BaseActivity(), View.OnClickListener{
+class NativeFullVideoActivity : AbstractActivity(), View.OnClickListener {
 
     private var videoAd: IFLYVideoAd? = null
     private var videoADDataRef: VideoDataRef? = null
@@ -45,7 +45,7 @@ class NativeFullVideoActivity: BaseActivity(), View.OnClickListener{
     }
 
     override fun onClick(view: View?) {
-        when(view?.id) {
+        when (view?.id) {
             R.id.adDetailContainer -> {
                 videoADDataRef?.onClick(adView)
             }
@@ -61,7 +61,7 @@ class NativeFullVideoActivity: BaseActivity(), View.OnClickListener{
 
     private fun loadVideo() {
         val adContainer = findViewById<ViewGroup>(R.id.adContainer)
-        val adPosition = intent?.getStringExtra(EXTRA_AD_POSITION)?:""
+        val adPosition = intent?.getStringExtra(EXTRA_AD_POSITION) ?: ""
         videoAd = IFLYVideoAd(
             App.context,
             adPosition,

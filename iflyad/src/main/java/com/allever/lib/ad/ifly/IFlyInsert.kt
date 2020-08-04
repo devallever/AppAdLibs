@@ -4,15 +4,16 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import com.allever.lib.ad.AdListener
 import com.allever.lib.ad.BaseAd
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.ActivityCollector
-import com.allever.lib.common.util.log
 import com.iflytek.voiceads.IFLYInterstitialAd
 import com.iflytek.voiceads.config.AdError
 import com.iflytek.voiceads.config.AdKeys
 import com.iflytek.voiceads.listener.IFLYAdListener
+import org.xm.lib.core.base.App
+import org.xm.lib.core.helper.ActivityHelper
+import org.xm.lib.core.util.log
 
-class IFlyInsert: BaseAd() {
+
+class IFlyInsert : BaseAd() {
 
     private var interstitialView: IFLYInterstitialAd? = null
     private var mAdInsertDialog: AlertDialog? = null
@@ -67,7 +68,7 @@ class IFlyInsert: BaseAd() {
     }
 
     override fun show() {
-        mAdInsertDialog = AlertDialog.Builder(ActivityCollector.getTopActivity()?:return)
+        mAdInsertDialog = AlertDialog.Builder(ActivityHelper.getTopActivity() ?: return)
             .setCancelable(true)
             .setView(interstitialView)
             .create()

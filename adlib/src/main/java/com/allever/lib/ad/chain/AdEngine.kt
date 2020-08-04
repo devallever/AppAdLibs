@@ -2,11 +2,16 @@ package com.allever.lib.ad.chain
 
 import android.view.ViewGroup
 import com.allever.lib.ad.ADType
-import com.allever.lib.common.util.log
+import org.xm.lib.core.util.log
 
-class AdEngine(private val adName: String, adConfigBean: AdConfig.AdConfigBean?, private val container: ViewGroup?) {
+class AdEngine(
+    private val adName: String,
+    adConfigBean: AdConfig.AdConfigBean?,
+    private val container: ViewGroup?
+) {
 
     private var mAdType: String? = ""
+
     //广告链
     private var adChainList = mutableListOf<AdConfig.AdConfigBean.ChainBean>()
 

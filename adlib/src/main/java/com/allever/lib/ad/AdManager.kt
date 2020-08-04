@@ -1,6 +1,7 @@
 package com.allever.lib.ad
 
 import android.content.Context
+
 @Deprecated("")
 abstract class AdManager {
 

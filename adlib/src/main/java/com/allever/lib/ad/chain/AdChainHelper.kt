@@ -2,9 +2,9 @@ package com.allever.lib.ad.chain
 
 import android.content.Context
 import android.view.ViewGroup
-import com.allever.lib.common.app.App
-import com.allever.lib.common.util.log
 import org.json.JSONObject
+import org.xm.lib.core.base.App
+import org.xm.lib.core.util.log
 
 object AdChainHelper {
 
