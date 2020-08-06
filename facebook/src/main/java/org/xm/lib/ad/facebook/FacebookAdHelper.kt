@@ -4,6 +4,7 @@ import android.content.Context
 import org.xm.lib.ad.core.AdManager
 import org.xm.lib.ad.core.BaseAd
 
+@Deprecated("")
 object FacebookAdHelper : AdManager() {
     override fun init(context: Context, appId: String, appKey: String, appToken: String) {
 

@@ -11,6 +11,7 @@ import org.xm.lib.core.base.App
 import org.xm.lib.core.util.log
 
 
+@Deprecated("")
 class FacebookBanner : BaseAd() {
 
     private var facebookbanner: AdView? = null

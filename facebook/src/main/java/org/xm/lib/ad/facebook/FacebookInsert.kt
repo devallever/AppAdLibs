@@ -10,7 +10,7 @@ import com.facebook.ads.InterstitialAdListener
 import org.xm.lib.core.base.App
 import org.xm.lib.core.util.log
 
-
+@Deprecated("")
 class FacebookInsert : BaseAd() {
     private var interstitialAd: InterstitialAd? = null
     override fun load(adPosition: String, container: ViewGroup?, adListener: AdListener?) {
