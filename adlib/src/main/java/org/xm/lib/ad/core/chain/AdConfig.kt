@@ -6,7 +6,7 @@ class AdConfig {
 
     class BusinessBean {
         /**
-         * name : 厂家-定值：A, AMZ, F, MI, IFly
+         * name : 厂家-定值：A, AMZ, FB, MI, IFly
          * appId :
          * appKey :
          * token :
@@ -22,7 +22,7 @@ class AdConfig {
         /**
          * name : 广告位名称-变量：例如主页退出插屏
          * type : 广告类型-定值：Banner，Insert，Video
-         * chain : [{"business":"厂家-定值：A, AMZ, F, MI, IFly","adPosition":"广告位"},{"business":"A: AdMob","adPosition":"广告位"},{"business":"AMZ: 亚马逊","adPosition":"广告位"},{"business":"F: Facebook","adPosition":"广告位"},{"business":"MI: 小米","adPosition":"广告位"},{"business":"IFly: 科大讯飞","adPosition":"广告位"}]
+         * chain : [{"business":"厂家-定值：A, AMZ, FB, MI, IFly","adPosition":"广告位"},{"business":"A: AdMob","adPosition":"广告位"},{"business":"AMZ: 亚马逊","adPosition":"广告位"},{"business":"F: Facebook","adPosition":"广告位"},{"business":"MI: 小米","adPosition":"广告位"},{"business":"IFly: 科大讯飞","adPosition":"广告位"}]
          */
 
         var name: String? = null
