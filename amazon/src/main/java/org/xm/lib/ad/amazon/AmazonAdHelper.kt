@@ -4,11 +4,14 @@ import android.content.Context
 import com.amazon.device.ads.AdRegistration
 import org.xm.lib.ad.core.AdManager
 import org.xm.lib.ad.core.BaseAd
+import org.xm.lib.core.util.log
 import org.xm.lib.core.util.loge
 
 object AmazonAdHelper : AdManager() {
     /***
      * appId 就是appkey
+     * @param appKey applicationId
+     * @param appToken 不需要token
      */
     override fun init(context: Context, appId: String, appKey: String, appToken: String) {
         // For debugging purposes enable logging, but disable for production builds.
@@ -18,6 +21,7 @@ object AmazonAdHelper : AdManager() {
         try {
             AdRegistration.setAppKey(appId)
         } catch (e: IllegalArgumentException) {
+            log("Amazon 初始化异常")
             loge("IllegalArgumentException thrown: $e")
             return
         }
